@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -24,7 +25,32 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
-      <ol style={{ listStyle: `none` }}>
+
+      <div className="container">
+        <div className="row">
+          {posts.map(post => {
+            const title = post.frontmatter.title || post.fields.slug
+            const image = getImage(post.frontmatter.image)
+            return (
+              <div className="col-md-4 mb-4" key={post.fields.slug}>
+                <div className="card shadow">
+                  <Link to={post.fields.slug} itemProp="url">
+                    <GatsbyImage image={image} />
+                  </Link>
+                  <div className="card-body">
+                    <small className="text-muted">
+                      {post.frontmatter.date}
+                    </small>
+                    <p className="card-text">Lorem20</p>
+                  </div>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      </div>
+
+      {/* <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
 
@@ -55,7 +81,7 @@ const BlogIndex = ({ data, location }) => {
             </li>
           )
         })}
-      </ol>
+      </ol> */}
     </Layout>
   )
 }
@@ -76,9 +102,14 @@ export const pageQuery = graphql`
           slug
         }
         frontmatter {
-          date(formatString: "MMMM DD, YYYY")
           title
           description
+          date(formatString: "MMMM DD, YYYY")
+          image {
+            childImageSharp {
+              gatsbyImageData(height: 344, width: 452)
+            }
+          }
         }
       }
     }
