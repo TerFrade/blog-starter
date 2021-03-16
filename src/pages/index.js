@@ -29,19 +29,27 @@ const BlogIndex = ({ data, location }) => {
       <div className="container">
         <div className="row">
           {posts.map(post => {
-            const title = post.frontmatter.title || post.fields.slug
+            const title = post.frontmatter.title || post.frontmatter.slug
+            const date = post.frontmatter.date.toUpperCase()
             const image = getImage(post.frontmatter.image)
             return (
-              <div className="col-md-4 mb-4" key={post.fields.slug}>
-                <div className="card shadow">
+              <div className="col-lg-4 mb-4" key={post.fields.slug}>
+                <div className="card shadow" style={{ borderRadius: "7px" }}>
                   <Link to={post.fields.slug} itemProp="url">
-                    <GatsbyImage image={image} />
+                    <GatsbyImage
+                      image={image}
+                      className="card-img-top"
+                      style={{ borderRadius: "7px 7px 0 0" }}
+                    />
                   </Link>
-                  <div className="card-body">
-                    <small className="text-muted">
-                      {post.frontmatter.date}
-                    </small>
-                    <p className="card-text">Lorem20</p>
+                  <div className="card-body px-4">
+                    <small className="text-muted">{date}</small>
+                    <h5 className="mt-2">{title}</h5>
+                    <p className="card-text">
+                      Aenean vulputate arcu vitae ligula semper auctor.
+                      Curabitur sodales enim feugiat nibh tincidunt tincidunt.
+                      Sed risus tellus, vulputate quis.
+                    </p>
                   </div>
                 </div>
               </div>
