@@ -8,9 +8,40 @@ const Layout = ({ location, title, children }) => {
 
   if (isRootPath) {
     header = (
-      <h1 className="main-heading">
-        <Link to="/">{title}</Link>
-      </h1>
+      <div>
+        <div className="navbar navbar-expand-lg navbar-light pt-0">
+          <div className="container align-items-baseline">
+            <Link className="header-link-home" to="/">
+              <h2>{title}</h2>
+            </Link>
+            <span>
+              <ul className="navbar-nav">
+                <li className="nav-item nav-link">
+                  <h5>Home</h5>
+                </li>
+                <li className="nav-item nav-link">
+                  <h5>Shop</h5>
+                </li>
+                <li className="nav-item nav-link">
+                  <h5>Blog</h5>
+                </li>
+              </ul>
+            </span>
+          </div>
+        </div>
+
+        <div
+          className="navbar navbar-expand-lg navbar-light shadow mb-5"
+          style={{ backgroundColor: "#FFFFFF" }}
+        >
+          <div className="container align-items-baseline">
+            <h2>Blog</h2>
+            <span>
+              <small className="text-muted">HOME / BLOG</small>
+            </span>
+          </div>
+        </div>
+      </div>
     )
   } else {
     header = (
@@ -22,7 +53,7 @@ const Layout = ({ location, title, children }) => {
 
   return (
     <div data-is-root-path={isRootPath}>
-      <header className="global-header">{header}</header>
+      <header classNameName="global-header">{header}</header>
       <main>{children}</main>
       <footer>
         © {new Date().getFullYear()}, Built with

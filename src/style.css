@@ -82,6 +82,7 @@ body {
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
   color: var(--color-text);
+  background-color: #f0f0f0 !important;
 }
 
 footer {
@@ -190,7 +191,7 @@ ol {
 
 ul li,
 ol li {
-  padding-left: var(--spacing-0);
+  padding-left: var(--spacing-8) !important;
   margin-bottom: calc(var(--spacing-8) / 2);
 }
 
@@ -203,7 +204,7 @@ li *:last-child {
 }
 
 li > ul {
-  margin-left: var(--spacing-8);
+  margin-left: var(--spacing-32);
   margin-top: calc(var(--spacing-8) / 2);
 }
 
@@ -335,7 +336,7 @@ a:focus {
 }
 
 img {
-  border-radius: 7px 7px !important;
+  border-radius: 7px 7px 0 0 !important;
 }
 
 /* Media queries */

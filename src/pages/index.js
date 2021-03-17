@@ -33,7 +33,7 @@ const BlogIndex = ({ data, location }) => {
             const date = post.frontmatter.date.toUpperCase()
             const image = getImage(post.frontmatter.image)
             return (
-              <div className="col-lg-4 mb-4" key={post.fields.slug}>
+              <div className="col-lg-4 mb-5" key={post.fields.slug}>
                 <div className="card h-100 shadow">
                   <Link to={post.fields.slug} itemProp="url">
                     <GatsbyImage image={image} className="card-img-top" />
