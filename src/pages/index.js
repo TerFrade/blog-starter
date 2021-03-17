@@ -26,14 +26,14 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
 
-      <div className="container">
+      <div className="container pt-4">
         <div className="row">
           {posts.map(post => {
             const title = post.frontmatter.title || post.frontmatter.slug
             const date = post.frontmatter.date.toUpperCase()
             const image = getImage(post.frontmatter.image)
             return (
-              <div className="col-lg-4 mb-5" key={post.fields.slug}>
+              <div className="col-lg-4 mb-4" key={post.fields.slug}>
                 <div className="card h-100 shadow">
                   <Link to={post.fields.slug} itemProp="url">
                     <GatsbyImage image={image} className="card-img-top" />
