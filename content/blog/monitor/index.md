@@ -1,6 +1,6 @@
 ---
 title: All about monitor lizards
-date: "2015-05-06T23:46:37.121Z"
+date: "2020-11-17T22:12:02.284Z"
 image: "./monitor.jpg"
 ---
 

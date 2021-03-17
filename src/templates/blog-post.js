@@ -8,10 +8,11 @@ const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   /** Add code to get image from query here **/
   const siteTitle = data.site.siteMetadata?.title || `Title`
+  const blog = post.frontmatter.title || `Blog`
   const { previous, next } = data
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} blogHeader={blog}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}

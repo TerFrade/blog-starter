@@ -1,6 +1,6 @@
 ---
 title: All about Baboons
-date: "2015-05-06T23:46:37.121Z"
+date: "2020-11-17T22:12:07.284Z"
 image: "./baboon.jpg"
 ---
 

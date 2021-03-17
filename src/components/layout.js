@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ location, title, children, blogHeader = "Blog" }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
 
@@ -37,7 +37,7 @@ const Layout = ({ location, title, children }) => {
         style={{ backgroundColor: "#FFFFFF" }}
       >
         <div className="container align-items-baseline">
-          <h2>Blog</h2>
+          <h3>{blogHeader}</h3>
           <span>
             <small className="text-muted">HOME / BLOG</small>
           </span>
@@ -48,20 +48,20 @@ const Layout = ({ location, title, children }) => {
 
   return (
     <div>
-      <header classNameName="global-header">{header}</header>
+      <header className="global-header">{header}</header>
       <main>{children}</main>
       <div style={{ backgroundColor: "#FFFFFF" }}>
-        <footer class="pt-4 mt-md-5 pt-md-5 container">
-          <div class="row">
-            <div class="col-3 col-md">
+        <footer className="pt-4 mt-md-5 pt-md-5 container">
+          <div className="row">
+            <div className="col-3 col-md">
               <h3>{title}</h3>
-              <ul class="list-unstyled text-small">
+              <ul className="list-unstyled text-small">
                 <li>© 2021 Teamgeek</li>
               </ul>
             </div>
-            <div class="col-3 col-md">
+            <div className="col-3 col-md">
               <h4>About us</h4>
-              <ul class="list-unstyled text-small">
+              <ul className="list-unstyled text-small">
                 <li>
                   <h6 className="mt-3">Locations</h6>
                 </li>
@@ -76,9 +76,9 @@ const Layout = ({ location, title, children }) => {
                 </li>
               </ul>
             </div>
-            <div class="col-3 col-md">
+            <div className="col-3 col-md">
               <h4>Product</h4>
-              <ul class="list-unstyled text-small">
+              <ul className="list-unstyled text-small">
                 <li>
                   <h6 className="mt-3">Prints</h6>
                 </li>
@@ -93,9 +93,9 @@ const Layout = ({ location, title, children }) => {
                 </li>
               </ul>
             </div>
-            <div class="col-3 col-md">
+            <div className="col-3 col-md">
               <h4>Contact us</h4>
-              <ul class="list-unstyled text-small">
+              <ul className="list-unstyled text-small">
                 <li>work@teamgeek.io</li>
                 <li>+27 64 891 2008</li>
               </ul>
@@ -103,12 +103,6 @@ const Layout = ({ location, title, children }) => {
           </div>
         </footer>
       </div>
-
-      {/* <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
-      </footer> */}
     </div>
   )
 }

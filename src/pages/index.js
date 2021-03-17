@@ -36,7 +36,11 @@ const BlogIndex = ({ data, location }) => {
               <div className="col-lg-4 mb-4" key={post.fields.slug}>
                 <div className="card h-100 shadow">
                   <Link to={post.fields.slug} itemProp="url">
-                    <GatsbyImage image={image} className="card-img-top" />
+                    <GatsbyImage
+                      image={image}
+                      className="card-img-top"
+                      alt="..."
+                    />
                   </Link>
                   <div className="card-body px-4">
                     <small className="text-muted">{date}</small>
@@ -53,6 +57,40 @@ const BlogIndex = ({ data, location }) => {
             )
           })}
         </div>
+        <nav aria-label="Page navigation example">
+          <ul className="pagination justify-content-center">
+            <li className="page-item">
+              <a className="page-link" href="#">
+                {"<"}
+              </a>
+            </li>
+            <li className="page-item">
+              <a className="page-link" href="#">
+                1
+              </a>
+            </li>
+            <li className="page-item">
+              <a className="page-link" href="#">
+                2
+              </a>
+            </li>
+            <li className="page-item">
+              <a className="page-link" href="#">
+                3
+              </a>
+            </li>
+            <li className="page-item">
+              <a className="page-link" href="#">
+                4
+              </a>
+            </li>
+            <li className="page-item">
+              <a className="page-link" href="#">
+                {">"}
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </Layout>
   )
@@ -76,7 +114,7 @@ export const pageQuery = graphql`
         frontmatter {
           title
           description
-          date(formatString: "MMMM DD, YYYY")
+          date(formatString: "MMM DD, YYYY")
           image {
             childImageSharp {
               gatsbyImageData(height: 344, width: 452)
