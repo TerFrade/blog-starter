@@ -50,11 +50,65 @@ const Layout = ({ location, title, children }) => {
     <div>
       <header classNameName="global-header">{header}</header>
       <main>{children}</main>
-      <footer>
+      <div style={{ backgroundColor: "#FFFFFF" }}>
+        <footer class="pt-4 mt-md-5 pt-md-5 container">
+          <div class="row">
+            <div class="col-3 col-md">
+              <h3>{title}</h3>
+              <ul class="list-unstyled text-small">
+                <li>© 2021 Teamgeek</li>
+              </ul>
+            </div>
+            <div class="col-3 col-md">
+              <h4>About us</h4>
+              <ul class="list-unstyled text-small">
+                <li>
+                  <h6 className="mt-3">Locations</h6>
+                </li>
+                <li>
+                  <h6 className="mt-3">What we do</h6>
+                </li>
+                <li>
+                  <h6 className="mt-3">How we do it</h6>
+                </li>
+                <li>
+                  <h6 className="mt-3">Who we are</h6>
+                </li>
+              </ul>
+            </div>
+            <div class="col-3 col-md">
+              <h4>Product</h4>
+              <ul class="list-unstyled text-small">
+                <li>
+                  <h6 className="mt-3">Prints</h6>
+                </li>
+                <li>
+                  <h6 className="mt-3">Lorem ipsum</h6>
+                </li>
+                <li>
+                  <h6 className="mt-3">This is dummy text</h6>
+                </li>
+                <li>
+                  <h6 className="mt-3">Hello</h6>
+                </li>
+              </ul>
+            </div>
+            <div class="col-3 col-md">
+              <h4>Contact us</h4>
+              <ul class="list-unstyled text-small">
+                <li>work@teamgeek.io</li>
+                <li>+27 64 891 2008</li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+      </div>
+
+      {/* <footer>
         © {new Date().getFullYear()}, Built with
         {` `}
         <a href="https://www.gatsbyjs.com">Gatsby</a>
-      </footer>
+      </footer> */}
     </div>
   )
 }
