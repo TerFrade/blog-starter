@@ -34,22 +34,19 @@ const BlogIndex = ({ data, location }) => {
             const image = getImage(post.frontmatter.image)
             return (
               <div className="col-lg-4 mb-4" key={post.fields.slug}>
-                <div className="card shadow" style={{ borderRadius: "7px" }}>
+                <div className="card h-100 shadow">
                   <Link to={post.fields.slug} itemProp="url">
-                    <GatsbyImage
-                      image={image}
-                      className="card-img-top"
-                      style={{ borderRadius: "7px 7px 0 0" }}
-                    />
+                    <GatsbyImage image={image} className="card-img-top" />
                   </Link>
                   <div className="card-body px-4">
                     <small className="text-muted">{date}</small>
                     <h5 className="mt-2">{title}</h5>
-                    <p className="card-text">
-                      Aenean vulputate arcu vitae ligula semper auctor.
-                      Curabitur sodales enim feugiat nibh tincidunt tincidunt.
-                      Sed risus tellus, vulputate quis.
-                    </p>
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: post.frontmatter.description || post.excerpt,
+                      }}
+                      itemProp="description"
+                    />
                   </div>
                 </div>
               </div>
@@ -57,39 +54,6 @@ const BlogIndex = ({ data, location }) => {
           })}
         </div>
       </div>
-
-      {/* <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
-
-          return (
-            <li key={post.fields.slug}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                    <Link to={post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-              </article>
-            </li>
-          )
-        })}
-      </ol> */}
     </Layout>
   )
 }
