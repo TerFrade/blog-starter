@@ -26,7 +26,7 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
 
-      <div className="container pt-4">
+      <div className="container mt-5">
         <div className="row">
           {posts.map(post => {
             const title = post.frontmatter.title || post.frontmatter.slug
@@ -38,7 +38,7 @@ const BlogIndex = ({ data, location }) => {
                   <Link to={post.fields.slug} itemProp="url">
                     <GatsbyImage
                       image={image}
-                      className="card-img-top"
+                      className="card-img-top img-raduis"
                       alt="..."
                     />
                   </Link>

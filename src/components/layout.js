@@ -4,9 +4,11 @@ import { Link } from "gatsby"
 const Layout = ({ location, title, children, blogHeader = "Blog" }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
+  var breadCrumbs = "HOME / BLOG"
 
   if (!isRootPath) {
     title = "My Animals ™"
+    breadCrumbs = ""
   }
 
   let header = (
@@ -33,13 +35,13 @@ const Layout = ({ location, title, children, blogHeader = "Blog" }) => {
       </div>
 
       <div
-        className="navbar navbar-expand-sm navbar-light shadow mb-5"
+        className="navbar navbar-expand-sm navbar-light shadow"
         style={{ backgroundColor: "#FFFFFF" }}
       >
         <div className="container align-items-baseline">
           <h3>{blogHeader}</h3>
           <span>
-            <small className="text-muted">HOME / BLOG</small>
+            <small className="text-muted">{breadCrumbs}</small>
           </span>
         </div>
       </div>
