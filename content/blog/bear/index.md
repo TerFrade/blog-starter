@@ -1,7 +1,7 @@
 ---
-title: All about monitor lizards
-date: "2020-11-17T22:12:10.284Z"
-image: "./monitor.jpg"
+title: All about bears
+date: "2020-11-17T22:12:04.284Z"
+image: "./bear.jpg"
 ---
 
 Wow! I love blogging so much already.

@@ -1,6 +1,6 @@
 ---
 title: All about zebra
-date: "2020-11-17T22:12:04.284Z"
+date: "2020-11-17T22:12:11.284Z"
 image: "./zebra.jpg"
 ---
 

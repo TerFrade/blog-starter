@@ -1,8 +1,8 @@
 ---
-title: All about lions
-date: "2020-11-17T22:12:15.284Z"
+title: All about king cobras
+date: "2020-11-17T22:12:08.284Z"
 description: "Hello World"
-image: "./lion.jpg"
+image: "./king cobra.jpg"
 ---
 
 ## Header 2

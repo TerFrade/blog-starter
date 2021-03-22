@@ -1,8 +1,8 @@
 ---
-title: All about Elephants
-date: "2020-11-17T22:12:13.284Z"
+title: All about Cheetahs
+date: "2020-11-17T22:12:05.284Z"
 description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
-image: "./elephant.jpg"
+image: "./cheetah.jpg"
 ---
 
 Far far away, behind the word mountains, far from the countries Vokalia and

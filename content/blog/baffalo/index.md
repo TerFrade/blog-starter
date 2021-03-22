@@ -1,6 +1,6 @@
 ---
 title: All about Baffalo
-date: "2020-11-17T22:12:03.284Z"
+date: "2020-11-17T22:12:12.284Z"
 image: "./buffalo.jpg"
 ---
 
