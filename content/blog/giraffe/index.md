@@ -1,5 +1,5 @@
 ---
-title: All about monitor Giraffes
+title: All about Giraffes
 date: "2020-11-17T22:12:02.284Z"
 image: "./giraffe.jpg"
 ---
