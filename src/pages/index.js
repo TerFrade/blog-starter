@@ -63,35 +63,42 @@ const BlogIndex = ({ data, location }) => {
             )
           })}
         </div>
+        <nav aria-label="Page navigation example">
+          <ul className="pagination justify-content-center">
+            <li className="page-item">
+              <h6>
+                {!isFirst && (
+                  <Link className="page-link" to={prevPage} rel="prev">
+                    ← Previous Page
+                  </Link>
+                )}
+              </h6>
+            </li>
+            <li className="page-item">
+              <h6>
+                {Array.from({ length: numPages }, (_, i) => (
+                  <Link
+                    className="page-link"
+                    key={`pagination-number${i + 1}`}
+                    to={`/${i === 0 ? "" : i + 1}`}
+                  >
+                    {i + 1}
+                  </Link>
+                ))}
+              </h6>
+            </li>
+            <li className="page-item">
+              <h6>
+                {!isLast && (
+                  <Link className="page-link" to={nextPage} rel="next">
+                    Next Page →
+                  </Link>
+                )}
+              </h6>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav aria-label="Page navigation example">
-        <ul className="pagination justify-content-center">
-          <li className="page-item">
-            {!isFirst && (
-              <Link to={prevPage} rel="prev">
-                ← Previous Page
-              </Link>
-            )}
-          </li>
-          <li>
-            {Array.from({ length: numPages }, (_, i) => (
-              <Link
-                key={`pagination-number${i + 1}`}
-                to={`/${i === 0 ? "" : i + 1}`}
-              >
-                {i + 1}
-              </Link>
-            ))}
-          </li>
-          <li className="page-item" onclick="activateLasers()">
-            {!isLast && (
-              <Link to={nextPage} rel="next">
-                Next Page →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </nav>
     </Layout>
   )
 }

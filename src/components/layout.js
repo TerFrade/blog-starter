@@ -55,13 +55,13 @@ const Layout = ({ location, title, children, blogHeader = "Blog" }) => {
       <div style={{ backgroundColor: "#FFFFFF" }}>
         <footer className="pt-4 mt-md-5 pt-md-5 container">
           <div className="row">
-            <div className="col-3 col-md">
+            <div className="col-lg-3">
               <h3>{title}</h3>
               <ul className="list-unstyled text-small">
                 <li>© 2021 Teamgeek</li>
               </ul>
             </div>
-            <div className="col-3 col-md">
+            <div className="col-lg-3">
               <h4>About us</h4>
               <ul className="list-unstyled text-small">
                 <li>
@@ -78,7 +78,7 @@ const Layout = ({ location, title, children, blogHeader = "Blog" }) => {
                 </li>
               </ul>
             </div>
-            <div className="col-3 col-md">
+            <div className="col-lg-3">
               <h4>Product</h4>
               <ul className="list-unstyled text-small">
                 <li>
@@ -95,7 +95,7 @@ const Layout = ({ location, title, children, blogHeader = "Blog" }) => {
                 </li>
               </ul>
             </div>
-            <div className="col-3 col-md">
+            <div className="col-lg-3">
               <h4>Contact us</h4>
               <ul className="list-unstyled text-small">
                 <li>work@teamgeek.io</li>

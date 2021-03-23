@@ -338,6 +338,23 @@ a:focus {
   border-radius: 7px 7px 0 0 !important;
 }
 
+.text-wrap {
+  text-overflow: ellipsis;
+}
+
+.page-link {
+  border-radius: 3px;
+  position: unset !important;
+  display: unset !important;
+  margin-right: 0.5rem !important;
+  color: #000033;
+}
+
+.page-link:hover {
+  background-color: #000033;
+  color: #ffffff;
+}
+
 /* Media queries */
 
 @media (max-width: 42rem) {
